@@ -157,7 +157,7 @@ a {{ color: var(--ink); }} a:hover {{ color: var(--red-dark); }}
 </div>
 <div class="list" id="posts">{''.join(rows)}
 </div>
-<p class="note">Export: „PNG“ unter jedem Motiv speichert es in Originalgröße (Feed 1080 × 1350, Story 1080 × 1920). Das klappt nur, wenn die Seite über einen lokalen Server geöffnet ist, nicht per Doppelklick.</p>
+<p class="note">Export: „PNG“ unter jedem Motiv speichert es in Originalgröße (Feed 1080 × 1350, Story 1080 × 1920). Das klappt online und über einen lokalen Server, aber nicht, wenn die Datei per Doppelklick geöffnet ist.</p>
 </main>
 <script src="https://cdn.jsdelivr.net/npm/html-to-image@1.11.11/dist/html-to-image.js" defer></script>
 <script>
@@ -239,7 +239,7 @@ a {{ color: var(--ink); }} a:hover {{ color: var(--red-dark); }}
         b.textContent = 'PNG';
       }} catch (e) {{
         console.warn(e); b.textContent = 'PNG';
-        alert('Export geht nur über einen lokalen Server (siehe Hinweis unten auf der Seite).');
+        alert('Export hat nicht geklappt. Bitte die Online-Version nutzen oder die Seite über einen lokalen Server öffnen.');
       }}
     }});
   }});
